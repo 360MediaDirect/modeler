@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["ES7"],
+    "removeComments": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "dist",
+    "sourceRoot": "src",
+    "esModuleInterop": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*.ts"]
+}
