@@ -1,18 +1,18 @@
 {
   "name": "@360mediadirect/modeler",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "DynamoDB model access library",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Tom Shawver <tom@360mediadirect.com>",
   "license": "ISC",
-  "private": false,
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
     "clean": "rm -rf node_modules dist"
   },
   "files": [
-    "./dist/*"
+    "./dist/**/*"
   ],
   "dependencies": {
     "@aws/dynamodb-data-mapper": "^0.7.3",
