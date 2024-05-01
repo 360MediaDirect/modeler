@@ -1,7 +1,6 @@
 import { mapper } from './lib/mapper'
 import { unwrapNumbers } from './lib/ddb'
 export { mapper }
-import { deepClone } from '@visulima/deep-clone'
 
 export class BaseModel {
   public id: string
@@ -17,7 +16,7 @@ export class BaseModel {
    */
   public static from<T extends BaseModel>(obj: Partial<T>): T {
     const model = new this() as T
-    const partialModel = deepClone(obj)
+    const partialModel = structuredClone(obj)
     Object.assign(model, partialModel)
     return model
   }
@@ -78,7 +77,7 @@ export class BaseModel {
   public async save<T extends BaseModel>(): Promise<T> {
     this.updatedAt = Date.now()
     const saved = await mapper.put(this)
-    const savedCopy = deepClone(saved)
+    const savedCopy = structuredClone(saved)
     Object.assign(this, savedCopy)
     return this as unknown as T
   }

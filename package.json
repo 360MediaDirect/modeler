@@ -1,6 +1,6 @@
 {
   "name": "@360mediadirect/modeler",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "DynamoDB model access library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,7 +17,6 @@
   "dependencies": {
     "@aws/dynamodb-data-mapper": "^0.7.3",
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
-    "@visulima/deep-clone": "^2.1.2",
     "http-errors": "^2.0.0",
     "listr2": "^8.2.1"
   },
